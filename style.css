@@ -1,8 +1,8 @@
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 body {
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Sukhumvit Set', 'Kanit', sans-serif;
   font-size: 1rem;
   margin: 0;
 }
@@ -25,20 +25,41 @@ a {
   color: red;
   text-decoration: none;
 }
+span {
+  font-size: 15px;
+}
+span.small {
+  font-size: 10px;
+}
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
 }
-.mail-banner .circle-red {
+.hex-wrapper {
+  overflow: hidden;
+}
+.mail-banner {
+  color: white;
+}
+.mail-banner .banner-bg {
+  background-image: url("images/top-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mail-banner .banner-bg .circle-red {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   background-color: red;
   border-radius: 50%;
+}
+.mail-body .content {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .mail-closing .closing {
   display: flex;
