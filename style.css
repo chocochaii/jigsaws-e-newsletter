@@ -1,0 +1,51 @@
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+}
+h2 {
+  color: red;
+}
+p {
+  text-indent: 1.25rem;
+}
+p.no-indent {
+  text-indent: 0;
+}
+a {
+  color: red;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mail-banner .circle-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
+.mail-closing .closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+}
+.text-center {
+  text-align: center;
+}
