@@ -10,26 +10,48 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
   font-weight: 300;
 }
 h2 {
-  color: red;
+  color: #e40044;
 }
 p {
-  text-indent: 1.25rem;
+  text-indent: 2.5rem;
+  text-align: justify;
 }
 p.no-indent {
   text-indent: 0;
 }
 a {
-  color: red;
+  color: #e40044;
   text-decoration: none;
 }
 span {
   font-size: 15px;
 }
+@media (max-width: 600px) {
+  span {
+    font-size: 12px;
+ }
+}
 span.small {
   font-size: 10px;
+}
+span.large {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+@media (max-width: 600px) {
+  span.large {
+    font-size: 12px;
+ }
+}
+strong {
+  font-weight: 500;
 }
 .container {
   display: flex;
@@ -39,14 +61,85 @@ span.small {
 }
 .hex-wrapper {
   overflow: hidden;
+  margin-bottom: 20px;
+}
+.hex-wrapper.hex-brands .hex img {
+  z-index: 2;
+}
+.hex-wrapper.hex-brands .hexLink {
+  background: #d4d4d4;
+}
+.hex-wrapper.hex-brands .hexLink::after {
+  content: "";
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  background: white;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate3d(0, 0, 1, -60deg) skewY(30deg);
+}
+@media (max-width: 600px) {
+  .hex-wrapper.hex-brands .hex img {
+    width: 55%;
+ }
+}
+.hex-wrapper.hex-features .hex img {
+  top: 34%;
+  width: 35%;
+}
+.hex-wrapper.hex-features .hex span {
+  width: 100%;
+  top: 65%;
+  font-size: 12px;
+  line-height: 1;
+}
+.hex-wrapper.hex-features .hexLink {
+  background-color: #f1f1f1;
+}
+@media (max-width: 600px) {
+  .hex-wrapper.hex-features .hex img {
+    width: 40%;
+ }
+  .hex-wrapper.hex-features .hex span {
+    font-size: 8px;
+ }
+}
+.hex-wrapper.hex-services .hex:first-child .hexLink > span {
+  word-break: break-all;
+}
+.hex-wrapper.hex-services .hex span {
+  width: 80%;
+  color: white;
+  line-height: 1;
+}
+.hex-wrapper.hex-services .hexLink {
+  background-color: #e40044;
+}
+@media (max-width: 600px) {
+  .hex-wrapper.hex-services .hex span {
+    font-size: 8px;
+ }
 }
 .mail-banner {
   color: white;
 }
 .mail-banner .banner-bg {
-  background-image: url("images/top-bg.png");
+  background-image: url('images/top-bg.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  height: 210px;
+}
+@media (max-width: 600px) {
+  .mail-banner .banner-bg {
+    height: 145px;
+ }
+}
+@media (max-width: 375px) {
+  .mail-banner .banner-bg {
+    height: 130px;
+ }
 }
 .mail-banner .banner-bg .circle-red {
   display: flex;
@@ -54,12 +147,24 @@ span.small {
   justify-content: center;
   width: 35px;
   height: 35px;
-  background-color: red;
+  background-color: #e40044;
   border-radius: 50%;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .mail-banner .banner-bg .circle-red {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+ }
 }
 .mail-body .content {
   margin-left: 20px;
   margin-right: 20px;
+}
+.mail-closing {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .mail-closing .closing {
   display: flex;
